@@ -1,0 +1,15 @@
+
+
+/* You can add global styles to this file, and also import other style files */
+div.ng-touched.ng-invalid {
+    border-color: red;
+}
+div.ng-valid {
+    border-color: #28a745;
+}
+table tr:hover {
+    cursor: pointer;
+}
+input.invalid {
+    border-color: red;
+  }
