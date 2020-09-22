@@ -1,0 +1,16 @@
+.example-container{
+    padding-top: 250px;
+}
+
+.form-field{
+    display: block
+}
+.example-card{
+    margin: 0 auto;
+    width: 40%;
+    text-align: center;
+}
+.mat-card-title{
+    background-color: seagreen;
+    color: seashell;
+}

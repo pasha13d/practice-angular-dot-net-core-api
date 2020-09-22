@@ -8,19 +8,61 @@ import { PaymentDetailListComponent } from './payment-details/payment-detail-lis
 import { PaymentDetailService } from './shared/payment-detail.service';
 import { HttpClientModule } from '@angular/common/http';
 
+import { ReactiveFormsModule  } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card'
+import {MatTableModule} from '@angular/material/table';
+import { LoginComponent } from './login/login.component';
+import { RouterModule, Routes }   from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
+
+
+const routes: Routes=[
+  {
+    path: '',
+    component: LoginComponent
+  },
+  { 
+    path: 'login',
+    component: LoginComponent
+},
+{
+  path: 'payment',
+  component: PaymentDetailsComponent
+}
+
+]
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
     PaymentDetailsComponent,
     PaymentDetailComponent,
-    PaymentDetailListComponent
+    PaymentDetailListComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatTableModule,
+    MatCardModule,
+    RouterModule.forRoot(routes),
+    AppRoutingModule
   ],
   providers: [PaymentDetailService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

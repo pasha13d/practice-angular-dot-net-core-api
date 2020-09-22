@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PaymentDetailService } from 'src/app/shared/payment-detail.service';
 import { NgForm } from '@angular/forms';
-import { v4 as uuidv4 } from 'uuid';
 
 @Component({
   selector: 'app-payment-detail',
@@ -54,7 +53,7 @@ export class PaymentDetailComponent implements OnInit {
   this.service.putPaymentDetail().subscribe(
     res => {
       this.resetForm(form);
-      this.service.refreshList();
+      this.service.refreshList()
     },
     err => {
       console.log(err);
