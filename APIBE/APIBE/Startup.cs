@@ -37,6 +37,9 @@ namespace APIBE
             services.AddDbContext<PaymentDetailContext>(optionns =>
   optionns.UseSqlServer(Configuration.GetConnectionString("PayDbConnection")));
 
+            services.AddDbContext<LoginContext>(optionns =>
+ optionns.UseSqlServer(Configuration.GetConnectionString("PayDbConnection")));
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
