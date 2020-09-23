@@ -30,5 +30,6 @@ namespace APIBE.Models
         [Required]
         [Column(TypeName = "nvarchar(3)")]
         public string CVV { get; set; }
+
     }
 }

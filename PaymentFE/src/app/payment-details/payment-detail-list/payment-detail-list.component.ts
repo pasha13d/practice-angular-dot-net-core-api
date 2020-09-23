@@ -9,16 +9,34 @@ import { PaymentDetailService } from 'src/app/shared/payment-detail.service';
 })
 export class PaymentDetailListComponent implements OnInit {
 
+  // private value;
+  // public total=0;
+
   constructor(public service: PaymentDetailService) { }
+  
+ 
 
   ngOnInit(): void {
     this.service.refreshList();
+    console.log("Total",this.Total);
   }
 
   populateForm(pd: PaymentDetail) {
     this.service.formData = Object.assign({}, pd);
   }
 
+
+  
+  get Total() {
+    let total: number = 0;
+     for(let p of this.service.list) 
+     {
+        total+= parseInt(p.CardNumber);
+     }
+     return total;
+  }
+
+ 
   onDelete(PMId) {
     this.service.deletePaymentDetail(PMId)
     .subscribe(res =>{
@@ -28,5 +46,4 @@ export class PaymentDetailListComponent implements OnInit {
         console.log(err);
       })
   }
-
 }

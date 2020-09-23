@@ -11,6 +11,8 @@ export class PaymentDetailComponent implements OnInit {
 
   constructor(public service:PaymentDetailService) { }
 
+  
+
   ngOnInit(): void {
     this.resetForm();
   }
