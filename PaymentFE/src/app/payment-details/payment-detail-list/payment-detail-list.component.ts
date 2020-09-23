@@ -29,10 +29,12 @@ export class PaymentDetailListComponent implements OnInit {
   
   get Total() {
     let total: number = 0;
+    if(!this.service.list==null){
      for(let p of this.service.list) 
      {
         total+= parseInt(p.CardNumber);
      }
+    }
      return total;
   }
 

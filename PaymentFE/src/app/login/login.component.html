@@ -1,4 +1,37 @@
-<div class="example-container">
+<form #form="ngForm" class=" example-container" autocomplete="off" (submit)="onSubmit(form)">
+    <mat-card class="example-card">
+        <mat-card-title>Login</mat-card-title>
+        <mat-card-content>
+            <div class="form-group">
+                <mat-form-field class="col-md-12">
+                    <mat-label>Email</mat-label>
+                    <input matInput name="Email" #Email="ngModel" [(ngModel)]="service.loginFormData.Email"
+                    class="form-control form-control-lg" placeholder="Email" required>
+                </mat-form-field>
+
+                <mat-form-field class="col-md-12">
+                    <mat-label>Password</mat-label>
+                    <input matInput name="Password" #Password="ngModel" [(ngModel)]="service.loginFormData.Password"
+                    class="form-control form-control-lg" placeholder="Password" required>
+                </mat-form-field>
+                <div class="form-group">
+                    <button mat-raised-button class="btn btn-info btn-lg btn-block" type="submit">SUBMIT</button>
+                </div>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</form>
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="example-container">
     <div class="form-container">
         <form [formGroup]="loginForm" (submit)="submit()">
             <mat-card class="example-card">
@@ -25,4 +58,4 @@
             </mat-card>
         </form>
     </div>
-</div>
+</div> -->
