@@ -9,6 +9,10 @@
     <Compile Remove="Migrations\20200922021450_InitialCreate.Designer.cs" />
     <Compile Remove="Migrations\20200922021956_InitialCreate.cs" />
     <Compile Remove="Migrations\20200922021956_InitialCreate.Designer.cs" />
+    <Compile Remove="Migrations\20200924023129_spGetPaymentById.cs" />
+    <Compile Remove="Migrations\20200924023129_spGetPaymentById.Designer.cs" />
+    <Compile Remove="Migrations\20200924024613_spGetPaymentById.cs" />
+    <Compile Remove="Migrations\20200924024613_spGetPaymentById.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

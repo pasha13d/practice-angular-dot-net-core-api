@@ -42,7 +42,7 @@ export class LoginComponent implements OnInit {
   }
   validateLogin(form: NgForm) {
     // console.log(form.value['Email'])
-    if(form.value['Email']== this.service.loginFormData.Email && form.value['Password'] == this.service.loginFormData.Password)
+    if(form.value.Email== this.service.loginFormData.Email && form.value.Password == this.service.loginFormData.Password)
     {
       this.router.navigateByUrl('/payment')
     }

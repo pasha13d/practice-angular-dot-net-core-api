@@ -1,0 +1,39 @@
+
+<div class="container">
+    <div class="card border-primary">
+        <div class="card-header">
+            <div class="card-body text-primary">
+                <form [formGroup]="dropDownForm">
+                    <div class="form-group">
+                        <label>Country</label>
+                        <select formControlName="country" (change)="GetStateById($event)" class="form-control">
+                            <option>Select Country</option>
+                            <option  [value]="country.Id" *ngFor="let country of countryList">{{country.countryName}}</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>State</label>
+                        <select formControlName="state" (change)="GetCityById($event)" class="form-control">
+                            <option>Select State</option>
+                            <option [value]="st.Id" *ngFor="let st of stateList">{{st.stateName}}</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>City</label>
+                        <select formControlName="city" class="form-control">
+                            <option>Select City</option>
+                            <option [value]="ct.Id" *ngFor="let ct of cityList">{{ct.cityName}}</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <button (click)="Save()" class="btn btn-success">Save</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>

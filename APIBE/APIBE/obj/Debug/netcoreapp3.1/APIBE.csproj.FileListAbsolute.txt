@@ -2,7 +2,6 @@ C:\Users\Doha\source\repos\APIBE\APIBE\bin\Debug\netcoreapp3.1\appsettings.Devel
 C:\Users\Doha\source\repos\APIBE\APIBE\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\Doha\source\repos\APIBE\APIBE\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 C:\Users\Doha\source\repos\APIBE\APIBE\bin\Debug\netcoreapp3.1\APIBE.exe
-C:\Users\Doha\source\repos\APIBE\APIBE\obj\Debug\netcoreapp3.1\APIBE.csprojAssemblyReference.cache
 C:\Users\Doha\source\repos\APIBE\APIBE\obj\Debug\netcoreapp3.1\APIBE.AssemblyInfoInputs.cache
 C:\Users\Doha\source\repos\APIBE\APIBE\obj\Debug\netcoreapp3.1\APIBE.AssemblyInfo.cs
 C:\Users\Doha\source\repos\APIBE\APIBE\obj\Debug\netcoreapp3.1\APIBE.RazorTargetAssemblyInfo.cache

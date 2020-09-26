@@ -36,7 +36,6 @@ export class PaymentDetailService {
     this.http.get(this.rootURL+'/PaymentDetail').toPromise().then(res => this.list = res as PaymentDetail[]);
   }
 
-
   postLoginCheck() {
     return this.http.get(this.rootURL+'/Login').toPromise().then(res=>this.loginList=res as LoginDetail[])
   }

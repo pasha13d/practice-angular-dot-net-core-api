@@ -19,6 +19,7 @@ import {MatTableModule} from '@angular/material/table';
 import { LoginComponent } from './login/login.component';
 import { RouterModule, Routes }   from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
+import { CascadingDropdownComponent } from './dropdown/cascading-dropdown/cascading-dropdown.component';
 
 
 const routes: Routes=[
@@ -29,12 +30,15 @@ const routes: Routes=[
   { 
     path: 'login',
     component: LoginComponent
-},
-{
-  path: 'payment',
-  component: PaymentDetailsComponent
-}
-
+  },
+  {
+    path: 'payment',
+    component: PaymentDetailsComponent
+  },
+  {
+    path: 'cascadingDDL',
+    component: CascadingDropdownComponent
+  }
 ]
 
 
@@ -45,7 +49,8 @@ const routes: Routes=[
     PaymentDetailsComponent,
     PaymentDetailComponent,
     PaymentDetailListComponent,
-    LoginComponent
+    LoginComponent,
+    CascadingDropdownComponent
   ],
   imports: [
     BrowserModule,

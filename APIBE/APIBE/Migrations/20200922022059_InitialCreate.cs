@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
+using System;
 
 namespace APIBE.Migrations
 {
@@ -21,12 +22,23 @@ namespace APIBE.Migrations
                 {
                     table.PrimaryKey("PK_paymentDetails", x => x.PMId);
                 });
+            //    string procedure = @"CREATE PROCEDURE spGetPaymentById
+            //                            @Id INT
+            //                            AS
+            //                            BEGIN
+            //                             SELECT * FROM paymentDetails
+            //                             WHERE PMId=@Id
+            //                            END";
+            //    migrationBuilder.Sql(procedure);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
                 name: "paymentDetails");
+
+            //string procedure = @"DROP PROCEDURE spGetPaymentById";
+            //migrationBuilder.Sql(procedure);
         }
     }
 }
