@@ -10,6 +10,6 @@ namespace APIBE.Models
     {
         [Key]
         public int Id { get; set; }
-        public string countryName { get; set; }
+        public string CountryName { get; set; }
     }
 }

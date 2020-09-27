@@ -34,9 +34,7 @@ export class CascadingDropdownComponent implements OnInit {
   }
 
   GetCityById(event) {
-    // if(event.terget.value >0) {
       this.ddlService.getCityByState(event.target.value).subscribe(cityList=>{this.cityList = cityList});
-    // }
   }
 
   Save() {

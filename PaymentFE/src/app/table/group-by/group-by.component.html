@@ -1,0 +1,24 @@
+<table class="table table-hover">
+    <!-- <tr style="background-color: #8fb2ff;">
+        <th>Department</th>
+        <th>Details</th>
+    </tr> -->
+    <tr *ngFor="let empList of groupByEmployeeList">
+        <td>         
+            <h5>{{ empList.Department}}</h5>
+            <table class="table table-hover">
+                <tr style="background-color: #8fb2ff;">
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Salary</th>
+                </tr>
+                <tr *ngFor="let emp of empList.EmployeeList">
+                    <td>{{ emp.Name }}</td>
+                    <td>{{ emp.Gender }}</td>
+                    <td>{{ emp.Salary }}</td>
+                </tr>
+            </table>
+        </td>
+        <!-- <td>{{Total}}</td> -->
+    </tr>
+</table>

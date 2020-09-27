@@ -13,6 +13,6 @@ namespace APIBE.Context
         {
 
         }
-        public DbSet<Login> login { get; set; }
+        public DbSet<Login> Login { get; set; }
     }
 }

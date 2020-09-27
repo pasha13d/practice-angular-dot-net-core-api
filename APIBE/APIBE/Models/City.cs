@@ -11,7 +11,7 @@ namespace APIBE.Models
         [Key]
         public int Id { get; set; }
 
-        public string cityName { get; set; }
+        public string CityName { get; set; }
 
         public int StateId { get; set; }
 

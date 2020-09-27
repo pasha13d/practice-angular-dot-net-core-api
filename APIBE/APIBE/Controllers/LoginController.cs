@@ -108,9 +108,9 @@ namespace APIBE.Controllers
         //    return login;
         //}
 
-        private bool LoginExists(int id)
-        {
-            return _context.Login.Any(e => e.LoginId == id);
-        }
+        //private bool LoginExists(int id)
+        //{
+        //    return _context.Login.Any(e => e.LoginId == id);
+        //}
     }
 }

@@ -25,14 +25,14 @@ namespace APIBE.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<PaymentDetail>>> GetpaymentDetails()
         {
-            return await _context.paymentDetails.ToListAsync();
+            return await _context.PaymentDetails.ToListAsync();
         }
 
         // GET: api/PaymentDetail/5
         [HttpGet("{id}")]
         public async Task<ActionResult<PaymentDetail>> GetPaymentDetail(int id)
         {
-            var paymentDetail = await _context.paymentDetails.FindAsync(id);
+            var paymentDetail = await _context.PaymentDetails.FindAsync(id);
 
             if (paymentDetail == null)
             {
@@ -80,7 +80,7 @@ namespace APIBE.Controllers
         [HttpPost]
         public async Task<ActionResult<PaymentDetail>> PostPaymentDetail(PaymentDetail paymentDetail)
         {
-            _context.paymentDetails.Add(paymentDetail);
+            _context.PaymentDetails.Add(paymentDetail);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetPaymentDetail", new { id = paymentDetail.PMId }, paymentDetail);
@@ -90,13 +90,13 @@ namespace APIBE.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<PaymentDetail>> DeletePaymentDetail(int id)
         {
-            var paymentDetail = await _context.paymentDetails.FindAsync(id);
+            var paymentDetail = await _context.PaymentDetails.FindAsync(id);
             if (paymentDetail == null)
             {
                 return NotFound();
             }
 
-            _context.paymentDetails.Remove(paymentDetail);
+            _context.PaymentDetails.Remove(paymentDetail);
             await _context.SaveChangesAsync();
 
             return paymentDetail;
@@ -104,7 +104,7 @@ namespace APIBE.Controllers
 
         private bool PaymentDetailExists(int id)
         {
-            return _context.paymentDetails.Any(e => e.PMId == id);
+            return _context.PaymentDetails.Any(e => e.PMId == id);
         }
     }
 }

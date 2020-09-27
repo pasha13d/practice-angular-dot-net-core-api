@@ -20,6 +20,7 @@ import { LoginComponent } from './login/login.component';
 import { RouterModule, Routes }   from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { CascadingDropdownComponent } from './dropdown/cascading-dropdown/cascading-dropdown.component';
+import { GroupByComponent } from './table/group-by/group-by.component';
 
 
 const routes: Routes=[
@@ -38,6 +39,10 @@ const routes: Routes=[
   {
     path: 'cascadingDDL',
     component: CascadingDropdownComponent
+  },
+  {
+    path: 'groupByEmployee',
+    component: GroupByComponent
   }
 ]
 
@@ -50,7 +55,8 @@ const routes: Routes=[
     PaymentDetailComponent,
     PaymentDetailListComponent,
     LoginComponent,
-    CascadingDropdownComponent
+    CascadingDropdownComponent,
+    GroupByComponent
   ],
   imports: [
     BrowserModule,

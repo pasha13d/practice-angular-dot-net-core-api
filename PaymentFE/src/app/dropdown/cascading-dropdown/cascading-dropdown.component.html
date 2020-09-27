@@ -8,7 +8,7 @@
                         <label>Country</label>
                         <select formControlName="country" (change)="GetStateById($event)" class="form-control">
                             <option>Select Country</option>
-                            <option  [value]="country.Id" *ngFor="let country of countryList">{{country.countryName}}</option>
+                            <option  [value]="country.Id" *ngFor="let country of countryList">{{country.CountryName}}</option>
                         </select>
                     </div>
 
@@ -16,7 +16,7 @@
                         <label>State</label>
                         <select formControlName="state" (change)="GetCityById($event)" class="form-control">
                             <option>Select State</option>
-                            <option [value]="st.Id" *ngFor="let st of stateList">{{st.stateName}}</option>
+                            <option [value]="st.Id" *ngFor="let st of stateList">{{st.StateName}}</option>
                         </select>
                     </div>
 
@@ -24,7 +24,7 @@
                         <label>City</label>
                         <select formControlName="city" class="form-control">
                             <option>Select City</option>
-                            <option [value]="ct.Id" *ngFor="let ct of cityList">{{ct.cityName}}</option>
+                            <option [value]="ct.Id" *ngFor="let ct of cityList">{{ct.CityName}}</option>
                         </select>
                     </div>
 

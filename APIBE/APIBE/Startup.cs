@@ -35,13 +35,13 @@ namespace APIBE
             });
             services.AddCors();
             services.AddDbContext<PaymentDetailContext>(optionns =>
-  optionns.UseSqlServer(Configuration.GetConnectionString("PayDbConnection")));
+                                                        optionns.UseSqlServer(Configuration.GetConnectionString("PayDbConnection")));
 
             services.AddDbContext<LoginContext>(optionns =>
- optionns.UseSqlServer(Configuration.GetConnectionString("PayDbConnection")));
+                                                optionns.UseSqlServer(Configuration.GetConnectionString("PayDbConnection")));
 
             services.AddDbContext<DatabaseContext>(optionns =>
- optionns.UseSqlServer(Configuration.GetConnectionString("PayDbConnection")));
+                                                   optionns.UseSqlServer(Configuration.GetConnectionString("PayDbConnection")));
 
         }
 
@@ -60,14 +60,14 @@ namespace APIBE
             app.UseAuthorization();
 
             app.UseCors(options =>
-   options.WithOrigins("http://localhost:4200")
-   .AllowAnyMethod()
-   .AllowAnyHeader());
+                        options.WithOrigins("http://localhost:4200")
+                        .AllowAnyMethod()
+                       .AllowAnyHeader());
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllers();
-            });
+                        app.UseEndpoints(endpoints =>
+                        {
+                            endpoints.MapControllers();
+                        });
         }
     }
 }

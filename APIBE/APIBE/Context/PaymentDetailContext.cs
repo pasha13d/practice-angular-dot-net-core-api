@@ -13,7 +13,7 @@ namespace APIBE.Context
         {
 
         }
-        public DbSet<PaymentDetail> paymentDetails { get; set; }
+        public DbSet<PaymentDetail> PaymentDetails { get; set; }
         public DbSet<APIBE.Models.Login> Login { get; set; }
     }
 }

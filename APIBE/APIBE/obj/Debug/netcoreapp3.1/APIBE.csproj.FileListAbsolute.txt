@@ -151,3 +151,4 @@ C:\Users\Doha\source\repos\APIBE\APIBE\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft
 C:\Users\Doha\source\repos\APIBE\APIBE\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Doha\source\repos\APIBE\APIBE\obj\Debug\netcoreapp3.1\APIBE.csproj.CoreCompileInputs.cache
 C:\Users\Doha\source\repos\APIBE\APIBE\obj\Debug\netcoreapp3.1\APIBE.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Doha\source\repos\APIBE\APIBE\obj\Debug\netcoreapp3.1\APIBE.csprojAssemblyReference.cache

@@ -10,8 +10,8 @@ namespace APIBE.Models
 {
     public class Login
     {
-        [Key]
-        public int LoginId { get; set; }
+        
+        public int Id { get; set; }
 
         [Required]
         [Column(TypeName = "nvarchar(50)")]

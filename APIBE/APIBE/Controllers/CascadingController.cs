@@ -29,20 +29,21 @@ namespace APIBE.Controllers
 
         [Route("GetStateById/{CountryId}")]
         [HttpGet]
-        public ActionResult<List<Country>> GetStateById(int CountryId)
+        public ActionResult<List<State>> GetStateById(int CountryId)
         {
             var stateList = _context.State.Where(s => s.CountryId == CountryId)
-                .Select(a => new { a.Id, a.stateName});
+                .Select(a => new { a.Id, a.StateName});
             return Ok(stateList);
         }
 
         [Route("GetCityById/{StateId}")]
         [HttpGet]
-        public ActionResult<List<Country>> GetCityById(int StateId)
+        public ActionResult<List<City>> GetCityById(int StateId)
         {
             var cityList = _context.City.Where(c => c.StateId == StateId)
-                .Select(a => new { a.Id, a.cityName });
+                .Select(a => new { a.Id, a.CityName });
             return Ok(cityList);
+
         }
     }
 }

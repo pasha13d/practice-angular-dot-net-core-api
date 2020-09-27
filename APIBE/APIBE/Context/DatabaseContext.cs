@@ -17,5 +17,6 @@ namespace APIBE.Context
         public DbSet<Country> Country { get; set; }
         public DbSet<State> State { get; set; }
         public DbSet<City> City { get; set; }
+        public DbSet<Employee> Employee { get; set; }
     }
 }
