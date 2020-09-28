@@ -1,8 +1,4 @@
-<table class="table table-hover">
-    <!-- <tr style="background-color: #8fb2ff;">
-        <th>Department</th>
-        <th>Details</th>
-    </tr> -->
+<!-- <table class="table">
     <tr *ngFor="let empList of groupByEmployeeList">
         <td>         
             <h5>{{ empList.Department }}</h5>
@@ -16,18 +12,45 @@
                     <td>{{ emp.Name }}</td>
                     <td>{{ emp.Gender }}</td>
                     <td>{{ emp.Salary }}</td>
-                    <!-- <td></td> -->
                 </tr>
                 <tr>
                     <td></td>
                     <td></td>
                     <td>Total: {{ empList.Total }}</td>
                 </tr>
-                <!-- <tr *ngFor="let sum of groupByEmployeeList">
-                    <td>{{ sum.Total }}</td>
-                </tr> -->
             </table>
         </td>
-        <!-- <td>{{Total}}</td> -->
+    </tr>
+</table> -->
+
+<table class="table table-hover">
+    <tr>  
+        <!-- <th>Department</th>    -->
+        <th></th>
+        <th>
+            <table class="table">
+            <tr>
+            <th style="width: 100px;">Name</th>
+            <th style="width: 100px;">Gender</th>
+            <th style="width: 100px;">Salary</th>
+            </tr>
+        </table>
+        </th>
+    </tr>
+    <tr *ngFor="let empList of groupByEmployeeList">
+        <!-- <tr> -->
+            <td>{{ empList.Department }}</td>
+            <table class="table">
+                <tr *ngFor="let emp of empList.EmployeeList">
+                    <td style="width: 100px;">{{ emp.Name }}</td>
+                    <td style="width: 100px;">{{ emp.Gender }}</td>
+                    <td style="width: 100px;">{{ emp.Salary }}</td>
+                </tr>
+                <tr>
+                    <td style="width: 100px;"></td>
+                    <td style="width: 100px;"></td>
+                    <td style="width: 100px;">Total: {{ empList.Total }}</td>
+                </tr>
+            </table>
     </tr>
 </table>
