@@ -10,6 +10,7 @@ namespace APIBE.ViewModel
     {
         public int Id { get; set; }
         public string Department { get; set; }
+        public decimal Total { get; set; }
 
         public List<EmployeeViewDetails> EmployeeList { get; set; }
     }
@@ -19,7 +20,7 @@ namespace APIBE.ViewModel
         public int Id { get; set; }
         public string Name { get; set; }
         public string Gender { get; set; }
-        public string Salary { get; set; }
+        public decimal Salary { get; set; }
     }
         
 }

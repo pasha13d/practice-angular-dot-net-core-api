@@ -20,7 +20,7 @@ namespace APIBE.Models
         [Column(TypeName = "nvarchar(10)")]
         public string Department { get; set; }
 
-        [Column(TypeName = "nvarchar(100)")]
-        public string Salary { get; set; }
+        
+        public decimal Salary { get; set; }
     }
 }

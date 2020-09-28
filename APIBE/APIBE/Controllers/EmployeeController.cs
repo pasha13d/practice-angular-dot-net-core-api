@@ -41,6 +41,7 @@ namespace APIBE.Controllers
                 {
                     Id = i++,
                     Department = a.Key,
+                    Total = a.Sum(s => s.Salary),
                     EmployeeList = a.Select(f => new EmployeeViewDetails()
                     {
                         Id = f.Id,
