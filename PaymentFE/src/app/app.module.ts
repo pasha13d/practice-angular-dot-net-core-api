@@ -21,16 +21,19 @@ import { RouterModule, Routes }   from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { CascadingDropdownComponent } from './dropdown/cascading-dropdown/cascading-dropdown.component';
 import { GroupByComponent } from './table/group-by/group-by.component';
+import { LoginDemoComponent } from './login-demo/login-demo.component';
 
 
 const routes: Routes=[
   {
     path: '',
     component: LoginComponent
+    // component: LoginDemoComponent
   },
   { 
     path: 'login',
     component: LoginComponent
+    // component: LoginDemoComponent
   },
   {
     path: 'payment',
@@ -56,7 +59,8 @@ const routes: Routes=[
     PaymentDetailListComponent,
     LoginComponent,
     CascadingDropdownComponent,
-    GroupByComponent
+    GroupByComponent,
+    LoginDemoComponent
   ],
   imports: [
     BrowserModule,

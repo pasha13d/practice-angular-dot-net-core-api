@@ -8,7 +8,7 @@ import { NgForm } from '@angular/forms';
   styles: []
 })
 export class PaymentDetailComponent implements OnInit {
-
+  
   constructor(public service:PaymentDetailService) { }
 
   ngOnInit(): void {

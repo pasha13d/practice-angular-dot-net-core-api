@@ -19,5 +19,6 @@ namespace APIBE.Models
         [Required]
         [Column(TypeName = "nvarchar(50)")]
         public string Password { get; set; }
+        public int AuthValue { get; set; }
     }
 }
