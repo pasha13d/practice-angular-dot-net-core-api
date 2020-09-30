@@ -18,12 +18,16 @@ export class UploadFileComponent implements OnInit {
   ngOnInit(): void {
   }  
 
-  public uploadFile = (files) => {
+  public uploadFile(files) {
     if(files.length === 0)
       return;
     let fileUpload = <File>files[0];
+
     const formData = new FormData();
 
+    for(let file of files)
+      formData.append("files", file);
+console.log(files);
     this.http.post('https://localhost:44359/api/ImageUpload', formData, { reportProgress: true, observe: 'events'})
     .subscribe(event => {
       if(event.type === HttpEventType.UploadProgress) {

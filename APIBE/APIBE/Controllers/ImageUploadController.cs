@@ -24,7 +24,7 @@ namespace APIBE.Controllers
             public IFormFile files { get; set; }
         }
 
-        [HttpPost]
+        [HttpPost, DisableRequestSizeLimit]
         public async Task<string> PostFileUpload([FromForm]FileUpload fileUpload)
         {
             try
