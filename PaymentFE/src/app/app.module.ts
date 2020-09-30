@@ -22,6 +22,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { CascadingDropdownComponent } from './dropdown/cascading-dropdown/cascading-dropdown.component';
 import { GroupByComponent } from './table/group-by/group-by.component';
 import { LoginDemoComponent } from './login-demo/login-demo.component';
+import { UploadFileComponent } from './upload/upload-file/upload-file.component';
 
 
 const routes: Routes=[
@@ -46,6 +47,10 @@ const routes: Routes=[
   {
     path: 'groupByEmployee',
     component: GroupByComponent
+  },
+  {
+    path: 'file-upload',
+    component: UploadFileComponent
   }
 ]
 
@@ -60,7 +65,8 @@ const routes: Routes=[
     LoginComponent,
     CascadingDropdownComponent,
     GroupByComponent,
-    LoginDemoComponent
+    LoginDemoComponent,
+    UploadFileComponent
   ],
   imports: [
     BrowserModule,
