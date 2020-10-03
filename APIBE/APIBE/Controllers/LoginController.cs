@@ -41,9 +41,11 @@ namespace APIBE.Controllers
 
             return login;
         }
+
+
         public IActionResult PostLoginCheck(Login login)
         {
-            int loginCheck = _context.Login.Count(f=>f.Email==login.Email && f.Password == login.Password);
+            var loginCheck = _context.Login.FirstOrDefault(f=>f.Email==login.Email && f.Password == login.Password);
 
             return Ok(loginCheck);
         }

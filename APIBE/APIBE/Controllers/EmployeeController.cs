@@ -33,7 +33,9 @@ namespace APIBE.Controllers
         public ActionResult<List<EmployeeViewModel>> GetGroupByEmployee()
         {
             List<EmployeeViewModel> dataList = new List<EmployeeViewModel>();
+
             var employeeGroupBy = _context.Employee.ToList();
+
             if (employeeGroupBy.Count > 0)
             {
                 int i = 1;

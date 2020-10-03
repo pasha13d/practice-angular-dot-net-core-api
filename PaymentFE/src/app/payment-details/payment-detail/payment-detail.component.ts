@@ -8,11 +8,15 @@ import { NgForm } from '@angular/forms';
   styles: []
 })
 export class PaymentDetailComponent implements OnInit {
-  
+
+  companyList;
+  floorList;
+
   constructor(public service:PaymentDetailService) { }
 
   ngOnInit(): void {
     this.resetForm();
+    this.service.getAllCompany().subscribe(companyList=>{this.companyList = companyList;});
   }
   
  resetForm(form?: NgForm) {
@@ -20,6 +24,8 @@ export class PaymentDetailComponent implements OnInit {
     form.resetForm();
    this.service.formData = {
      PMId: 0,
+     Company: '',
+     Floor: '',
      CardOwnerName: '',
      CardNumber: '',
      ExpirationDate: '',
@@ -61,4 +67,10 @@ export class PaymentDetailComponent implements OnInit {
     }
   )
  }
+
+ getFloorById(event)
+ {
+    this.service.getFloorByCompany(event.target.value).subscribe(floorList=>{this.floorList = floorList});
+ }
+
 }

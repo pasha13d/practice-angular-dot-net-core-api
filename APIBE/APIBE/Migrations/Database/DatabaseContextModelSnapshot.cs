@@ -39,6 +39,21 @@ namespace APIBE.Migrations.Database
                     b.ToTable("City");
                 });
 
+            modelBuilder.Entity("APIBE.Models.Company", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CompanyName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Company");
+                });
+
             modelBuilder.Entity("APIBE.Models.Country", b =>
                 {
                     b.Property<int>("Id")
@@ -94,6 +109,24 @@ namespace APIBE.Migrations.Database
                     b.HasKey("Id");
 
                     b.ToTable("FileUpload");
+                });
+
+            modelBuilder.Entity("APIBE.Models.Floors", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CompanyName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FloorName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Floors");
                 });
 
             modelBuilder.Entity("APIBE.Models.State", b =>

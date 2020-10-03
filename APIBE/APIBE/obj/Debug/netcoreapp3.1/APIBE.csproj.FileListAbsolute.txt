@@ -149,5 +149,11 @@ C:\Users\Doha\source\repos\APIBE\APIBE\bin\Debug\netcoreapp3.1\ru\Microsoft.Code
 C:\Users\Doha\source\repos\APIBE\APIBE\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Doha\source\repos\APIBE\APIBE\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Doha\source\repos\APIBE\APIBE\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Doha\source\repos\APIBE\APIBE\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Doha\source\repos\APIBE\APIBE\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Doha\source\repos\APIBE\APIBE\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Doha\source\repos\APIBE\APIBE\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Doha\source\repos\APIBE\APIBE\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Doha\source\repos\APIBE\APIBE\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\Doha\source\repos\APIBE\APIBE\obj\Debug\netcoreapp3.1\APIBE.csproj.CoreCompileInputs.cache
 C:\Users\Doha\source\repos\APIBE\APIBE\obj\Debug\netcoreapp3.1\APIBE.MvcApplicationPartsAssemblyInfo.cache

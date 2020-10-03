@@ -19,5 +19,7 @@ namespace APIBE.Context
         public DbSet<City> City { get; set; }
         public DbSet<Employee> Employee { get; set; }
         public DbSet<FileUpload> FileUpload { get; set; }
+        public DbSet<Company> Company { get; set; }
+        public DbSet<Floors> Floors { get; set; }
     }
 }

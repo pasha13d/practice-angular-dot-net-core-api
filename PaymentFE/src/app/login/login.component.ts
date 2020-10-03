@@ -5,6 +5,8 @@ import {} from '../payment-details/payment-detail/payment-detail.component'
 
 import { PaymentDetailService } from '../shared/payment-detail.service';
 import { MyErrorStateMatcher } from '../default.error-matcher';
+import { Observable } from 'rxjs';
+import { LoginDetail } from '../shared/login.model';
 
 @Component({
   selector: 'app-login',
@@ -13,11 +15,14 @@ import { MyErrorStateMatcher } from '../default.error-matcher';
 })
 export class LoginComponent implements OnInit {
 
+  logs;
   matcher = new MyErrorStateMatcher();
   
   constructor(private fb: FormBuilder, private router: Router, public service: PaymentDetailService) { }
 
   ngOnInit(): void {
+    this.service.getLoginCheck();
+    // this.service.getLoginCheck().subscribe(logs=>{this.logs = logs});
   }
   resetForm(form?: NgForm) {
     if(form != null)
@@ -30,11 +35,15 @@ export class LoginComponent implements OnInit {
   onSubmit(form: NgForm) {
     this.validateLogin(form);
   }
-  validateLogin(form: NgForm) {
-    if(form.value.Email== this.service.loginFormData.Email && form.value.Password == this.service.loginFormData.Password)
+  validateLogin(form: NgForm) {  
+    if(form.value.Email == this.service.loginFormData.Email && form.value.Password == this.service.loginFormData.Password)
     {
-      console.log(form.value.Email)
-      this.router.navigateByUrl('/payment')
+      this.router.navigateByUrl('/payment');
+    }
+    else
+    {
+      this.router.navigateByUrl('');
+      console.log("Not Found");
     }
    }
 

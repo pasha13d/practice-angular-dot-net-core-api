@@ -21,7 +21,7 @@ namespace APIBE.Controllers
 
         public class FileUpload
         {
-            public IFormFile files { get; set; }
+            public IFormFile Files { get; set; }
         }
 
         [HttpPost, DisableRequestSizeLimit]
@@ -29,17 +29,17 @@ namespace APIBE.Controllers
         {
             try
             {
-                if (fileUpload.files.Length > 0)
+                if (fileUpload.Files.Length > 0)
                 {
                     if (!Directory.Exists(_webHostEnvironment.WebRootPath + "\\Upload\\"))
                     {
                         Directory.CreateDirectory(_webHostEnvironment.WebRootPath + "\\Upload\\");
                     }
-                    using (FileStream fileStream = System.IO.File.Create(_webHostEnvironment.WebRootPath + "\\Upload\\" + fileUpload.files.FileName))
+                    using (FileStream fileStream = System.IO.File.Create(_webHostEnvironment.WebRootPath + "\\Upload\\" + fileUpload.Files.FileName))
                     {
-                        fileUpload.files.CopyTo(fileStream);
+                        fileUpload.Files.CopyTo(fileStream);
                         fileStream.Flush();
-                        return "\\Upload\\" + fileUpload.files.FileName;
+                        return "\\Upload\\" + fileUpload.Files.FileName;
                     }
                 }
                 else

@@ -36,8 +36,17 @@ export class PaymentDetailService {
     this.http.get(this.rootURL+'/PaymentDetail').toPromise().then(res => this.list = res as PaymentDetail[]);
   }
 
-  postLoginCheck() {
-    return this.http.get(this.rootURL+'/Login').toPromise().then(res=>this.loginList=res as LoginDetail[])
+  getLoginCheck() {
+    // this.http.get(this.rootURL+'/Login').toPromise().then(res=>this.loginList=res as LoginDetail[]);
+    // return this.http.get(this.rootURL+'/Login');
+    return this.http.post(this.rootURL+'/Login', this.loginFormData)
   }
 
+  getAllCompany() {
+    return this.http.get('https://localhost:44359/api/Company/GetAllCompany');
+  }
+
+  getFloorByCompany(CompanyId: number) {
+    return this.http.get('https://localhost:44359/api/Company/GetFloorById/'+ CompanyId);
+  }
 }
